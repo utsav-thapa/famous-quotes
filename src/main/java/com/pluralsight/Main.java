@@ -1,8 +1,5 @@
 package com.pluralsight;
-
 import java.util.Scanner;
-
-
 public class Main {
     public static void main(String[] args) {
         String[] quotes = {
@@ -28,12 +25,9 @@ public class Main {
             System.out.println("-------------------------------------------------------------------------");
             System.out.println("Choose a quote to display or enter random for a random quote or exit to exit the program.");
             String userInput = scanner.nextLine();
-
-
-
             switch (userInput) {
                 case ("random"):
-                    int random = (int) (Math.random() * 10);
+                    int random = Integer.parseInt(String.valueOf(Math.round(Math.random() * 10)));
                     System.out.println(quotes[random]);
                     break;
                 case ("exit"):
@@ -53,9 +47,7 @@ public class Main {
                         System.out.println(s);
                         System.err.println("Wrong input!");
                         System.out.println("Choose a quote to display or enter random for a random quote or exit to exit the program.");
-
                     }
-
             }
         }
         while(!wantsAnotherQuote);
