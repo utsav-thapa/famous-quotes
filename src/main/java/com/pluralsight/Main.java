@@ -18,13 +18,13 @@ public class Main {
                 "10. Life is what happens when you're busy making other plans. – John Lennon"
         };
         System.out.println("\t \t Great quotes.");
-        for (int i = 0; i < quotes.length; i++) {
-            System.out.println(quotes[i]);
+        for (String quote : quotes) {
+            System.out.println(quote);
         }
         Scanner scanner = new Scanner(System.in);
         boolean wantsAnotherQuote = false;
         do{
-            System.out.println("");
+            System.out.println();
             System.out.println("-------------------------------------------------------------------------");
             System.out.println("Choose a quote to display or enter random for a random quote or exit to exit the program.");
             String userInput = scanner.nextLine();
